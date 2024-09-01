@@ -6,26 +6,8 @@ summary: 'Learn how to install the .NET SDK and ASP.NET Core runtime on Arch Lin
 
 Blazor WebAssembly is a popular framework for building interactive web applications using C# instead of JavaScript. In this guide, we will walk you through the steps to install the .NET SDK and ASP.NET Core runtime on Arch Linux and create your first Blazor WebAssembly application.
 
-## Step 1: Add Microsoft’s Repository[Optional, only add this if step 2 fails]
 
-To ensure you have access to the latest .NET SDK packages, add the Microsoft repository to your `pacman` configuration:
-
-1. Open the `pacman` configuration file:
-
-    ```bash
-    sudo nano /etc/pacman.conf
-    ```
-
-2. Add the following lines at the bottom of the file:
-
-    ```plaintext
-    [dotnet]
-    Server = https://packages.microsoft.com/archlinux/core/$arch
-    ```
-
-3. Save and close the file.
-
-## Step 2: Install .NET SDK and ASP.NET Runtime
+## Step 1: Install .NET SDK and ASP.NET Runtime
 
 Use the AUR helper `yay` to install the necessary .NET packages:
 
@@ -41,7 +23,7 @@ Use the AUR helper `yay` to install the necessary .NET packages:
     yay -S aspnet-runtime
     ```
 
-## Step 3: Create a New Blazor WebAssembly App
+## Step 2: Create a New Blazor WebAssembly App
 
 Now that the .NET SDK and runtime are installed, create a new Blazor WebAssembly app:
 
@@ -57,7 +39,7 @@ Now that the .NET SDK and runtime are installed, create a new Blazor WebAssembly
     cd MyBlazorApp
     ```
 
-## Step 4: Build and Run the Application
+## Step 3: Build and Run the Application
 
 Build and run your Blazor WebAssembly app:
 
