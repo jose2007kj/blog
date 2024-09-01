@@ -1,0 +1,83 @@
+---
+title: 'Installing and Running Your First Blazor WebAssembly App on Arch Linux'
+publishedAt: '2024-09-01'
+summary: 'Learn how to install the .NET SDK and ASP.NET Core runtime on Arch Linux, and create your first Blazor WebAssembly app.'
+---
+
+Blazor WebAssembly is a popular framework for building interactive web applications using C# instead of JavaScript. In this guide, we will walk you through the steps to install the .NET SDK and ASP.NET Core runtime on Arch Linux and create your first Blazor WebAssembly application.
+
+## Step 1: Add Microsoft’s Repository
+
+To ensure you have access to the latest .NET SDK packages, add the Microsoft repository to your `pacman` configuration:
+
+1. Open the `pacman` configuration file:
+
+    ```bash
+    sudo nano /etc/pacman.conf
+    ```
+
+2. Add the following lines at the bottom of the file:
+
+    ```plaintext
+    [dotnet]
+    Server = https://packages.microsoft.com/archlinux/core/$arch
+    ```
+
+3. Save and close the file.
+
+## Step 2: Install .NET SDK and ASP.NET Runtime
+
+Use the AUR helper `yay` to install the necessary .NET packages:
+
+1. Install the .NET SDK:
+
+    ```bash
+    yay -S dotnet-sdk
+    ```
+
+2. Install the ASP.NET Core runtime:
+
+    ```bash
+    yay -S aspnet-runtime
+    ```
+
+## Step 3: Create a New Blazor WebAssembly App
+
+Now that the .NET SDK and runtime are installed, create a new Blazor WebAssembly app:
+
+1. Use the .NET CLI to create a new app:
+
+    ```bash
+    dotnet new blazorwasm -o MyBlazorApp
+    ```
+
+2. Navigate to the app directory:
+
+    ```bash
+    cd MyBlazorApp
+    ```
+
+## Step 4: Build and Run the Application
+
+Build and run your Blazor WebAssembly app:
+
+1. Build the app:
+
+    ```bash
+    dotnet build
+    ```
+
+2. Run the app:
+
+    ```bash
+    dotnet run
+    ```
+
+## Step 5: Access Your Application
+
+Open a web browser and navigate to `http://localhost:5000` to see your Blazor WebAssembly app in action!
+
+## Conclusion
+
+By following these steps, you can easily set up a Blazor WebAssembly development environment on Arch Linux. With your first app running, you're ready to explore more of what Blazor has to offer for building modern web applications using C# and .NET!
+
